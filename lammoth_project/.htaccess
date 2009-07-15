@@ -1,0 +1,13 @@
+
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^project.lammoth.es$ [OR]
+RewriteCond %{HTTP_HOST} ^www.project.lammoth.es$
+RewriteRule ^.*$ "http\:\/\/lammoth\.es\/project" [R=301,L]
+
+<IfModule mod_rewrite.c>
+   RewriteEngine on
+   RewriteRule    ^$ app/webroot/    [L]
+   RewriteRule    (.*) app/webroot/$1 [L]
+</IfModule>
+
