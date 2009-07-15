@@ -68,7 +68,7 @@ class UsersController extends AppController {
    
   function login () {
 	 
-   }
+  }
   
   function logout () {
       $this->Session->destroy('user');
